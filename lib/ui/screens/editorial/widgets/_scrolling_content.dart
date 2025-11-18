@@ -36,7 +36,7 @@ class _ScrollingContent extends StatelessWidget {
                     _fixNewlines(value).substring(1),
                     dropCap: DropCap(
                       width: dropCapWidth,
-                      height: $styles.text.body.fontSize! * $styles.text.body.height! * 2,
+                      height: $styles.text.body.fontSize! * $styles.text.body.height! * 2 * 1.2,
                       child: Transform.translate(
                         offset: Offset(0, bodyStyle.fontSize! * (bodyStyle.height! - 1) - 2),
                         child: Text(
@@ -49,11 +49,12 @@ class _ScrollingContent extends StatelessWidget {
                         ),
                       ),
                     ),
-                    style: $styles.text.body,
+                    style: $styles.text.body.copyWith(fontSize: $styles.text.body.fontSize! * 1.2),
                     dropCapPadding: EdgeInsets.only(right: 6),
                     dropCapStyle: $styles.text.dropCase.copyWith(
                       color: $styles.colors.accent3,
                       height: 1,
+                      fontSize: $styles.text.dropCase.fontSize! * 1.2,
                     ),
                   )
           ),
