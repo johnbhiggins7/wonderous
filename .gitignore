@@ -46,3 +46,6 @@ app.*.map.json
 /android/app/release
 
 macos/Flutter/ephemeral
+
+.prompt_attachments
+*.hologram.dart
